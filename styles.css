@@ -97,6 +97,22 @@ h1, h2, h3, p, figure { margin-top: 0; }
 .service-card > a span { font-size: 16px; transition: transform .2s; }
 .service-card > a:hover span { transform: translateX(-4px); }
 
+.offer { padding-block: 58px; background: #eff2e9; }
+.offer-panel { position: relative; display: flex; min-height: 315px; overflow: hidden; align-items: center; justify-content: space-between; padding: 43px 60px; color: white; background: var(--green); }
+.offer-content { position: relative; z-index: 1; }
+.offer-kicker { display: inline-flex; align-items: center; gap: 8px; padding: 6px 11px; color: #e3ecaa; border: 1px solid #e3ecaa66; border-radius: 30px; font-size: 11px; }
+.offer-content h2 { margin: 15px 0 3px; font-size: clamp(34px, 4vw, 47px); font-weight: 600; line-height: 1.35; }
+.offer-content h2 span { color: #e3ecaa; }
+.offer-content p { margin-bottom: 20px; color: #e2e9e3; font-size: 15px; }
+.offer-price { position: relative; z-index: 1; display: grid; width: 200px; height: 200px; flex: 0 0 auto; align-content: center; justify-items: center; color: var(--green); background: #e3ecaa; border-radius: 50%; transform: rotate(-5deg); }
+.offer-price-label { font-size: 12px; }
+.offer-price strong { font-family: "IBM Plex Sans Arabic", sans-serif; font-size: 65px; font-weight: 700; line-height: 1.05; }
+.offer-currency { font-size: 15px; font-weight: 600; }
+.offer-spark { position: absolute; top: 22px; left: 21px; color: var(--green); font-size: 18px; }
+.offer-decoration { position: absolute; border: 1px solid #edf3d033; border-radius: 50%; }
+.offer-decoration-one { top: -160px; left: 120px; width: 400px; height: 400px; }
+.offer-decoration-two { top: -118px; left: 162px; width: 315px; height: 315px; }
+
 .about { background: #eff2e9; }
 .about-grid { display: grid; grid-template-columns: 1fr .88fr; align-items: center; gap: 105px; }
 .about-visual { position: relative; width: 100%; max-width: 490px; height: 510px; }
@@ -167,7 +183,7 @@ h1, h2, h3, p, figure { margin-top: 0; }
 @media (min-width: 1400px) { .hero-image-frame { height: 555px; } }
 @media (max-width: 950px) {
   .container { width: min(100% - 44px, 740px); }
-  .main-nav { gap: 20px; }
+  .main-nav { gap: 16px; }
   .hero-grid { gap: 32px; }
   .hero-image-frame { height: 445px; }
   .hero-points { gap: 7px; }
@@ -211,10 +227,16 @@ h1, h2, h3, p, figure { margin-top: 0; }
   .service-card h3 { font-size: 15px; }
   .service-card p { font-size: 11px; }
   .service-number { font-size: 9px; }
+  .offer { padding-block: 38px; }
+  .offer-panel { min-height: 290px; padding: 34px 26px; }
+  .offer-price { width: 155px; height: 155px; }
+  .offer-price strong { font-size: 53px; }
+  .offer-content h2 { font-size: 34px; }
   .about-grid { grid-template-columns: 1fr; gap: 44px; }
   .about-visual { width: calc(100% - 10px); max-width: none; height: 390px; margin-right: 10px; }
   .about-visual > img { border-radius: 4px 110px 4px 4px; }
-  .about-spark { left: -20px; }
+  .about-caption { right: -10px; }
+  .about-spark { left: 0; }
   .about-copy > p { font-size: 13px; }
   .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .gallery-item { height: 205px; }
@@ -244,6 +266,13 @@ h1, h2, h3, p, figure { margin-top: 0; }
   .hero-points strong { font-size: 10px; }
   .hero-points span { font-size: 9px; }
   .service-card { padding-inline: 12px; }
+  .offer-panel { padding-inline: 18px; }
+  .offer-price { width: 125px; height: 125px; }
+  .offer-price strong { font-size: 43px; }
+  .offer-price-label { font-size: 10px; }
+  .offer-currency { font-size: 12px; }
+  .offer-content h2 { font-size: 30px; }
+  .offer-content p { font-size: 13px; }
   .contact-panel { padding-inline: 19px; }
   .contact-actions { gap: 12px; }
 }
